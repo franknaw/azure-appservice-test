@@ -36,7 +36,7 @@
 * Add Policy
 * * This validates the client token
 * * This gets and sends a token to the Backend Function App
-```json
+```XML
 <policies>
     <inbound>
         <base />
