@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+</head>
+<body>
+<h1><%= title %></h1>
+<p>Welcome to <%= title %></p>
+
+
+<p>
+<hr>
+<div id="foo">
+    Test APIM Endpoint Hello:
+    <button id="fetch-data2">Call Endpoint</button>
+    <p>
+    <div id="data-container2"></div>
+</div>
+<p>
+<hr>
+
+<script>
+
+
+    const fetchDataButton2 = document.getElementById('fetch-data2');
+    const dataContainer2 = document.getElementById('data-container2');
+    fetchDataButton2.addEventListener('click', async () => {
+        try {
+            const response = await fetch('https://fnaw-api.azure-api.net/fnaw-test/hello', {
+
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Access-Control-Allow-Origin': '*',
+                        'Authorization': 'Bearer token'
+                    },
+                }
+            );
+            const data = await response.json();
+
+            dataContainer2.innerHTML = JSON.stringify(data);
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            dataContainer2.innerHTML = 'Error fetching data.';
+        }
+    });
+
+
+</script>
+
+
+</body>
+</html>
