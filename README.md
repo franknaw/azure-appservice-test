@@ -9,6 +9,7 @@
 * API Permissions
 * * Add Backend-App App Reg Reader - Delegated
 * * Add Backend-App App Reg ReaderRole - Application
+* foo-c595-4853-8253-d4616e458177 
 
 
 ### Backend App Reg
@@ -20,6 +21,7 @@
 * * Add Role for users/groups/applications
 * Expose an API
 * * Reader - Admin and users
+* foo-6072-4b5a-995e-f97f431391e3
 
 ### Client App Reg 2
 * API Management Service uses this 
@@ -28,7 +30,8 @@
 * * https://foo-api.developer.azure-api.net/signin-oauth/code/callback/oauth-clientflow1
 * API Permissions
 * * Add Backend-App App Reg - Delegated
-
+* foo-d7c6-4fb9-8b9b-9ae84326eb79
+  
 ### Backend Function App
 * Add auth to Backend-App App reg
 
